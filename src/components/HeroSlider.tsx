@@ -44,14 +44,13 @@ const HeroSlider = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${slide.image})` }}
           initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 0.45, scale: 1 }}
+          animate={{ opacity: 0.7, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2 }}
         />
       </AnimatePresence>
 
-      <div className="absolute inset-0 gradient-hero" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/30 to-navy/70" />
       <div className="absolute top-20 left-10 w-72 h-72 bg-flame/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
