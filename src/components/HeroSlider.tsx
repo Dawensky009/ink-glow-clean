@@ -44,7 +44,7 @@ const HeroSlider = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${slide.image})` }}
           initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 0.15, scale: 1 }}
+          animate={{ opacity: 0.45, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2 }}
         />
