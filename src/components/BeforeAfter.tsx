@@ -1,22 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import beforeBathroom from "@/assets/before-bathroom.jpg";
+import afterBathroom from "@/assets/after-bathroom.jpg";
+import beforeKitchen from "@/assets/before-kitchen.jpg";
+import afterKitchen from "@/assets/after-kitchen.jpg";
+import beforeLiving from "@/assets/before-living.jpg";
+import afterLiving from "@/assets/after-living.jpg";
 
 const beforeAfterPairs = [
-  {
-    before: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
-    after: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80",
-    label: "Bathroom Deep Clean",
-  },
-  {
-    before: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600&q=80",
-    after: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
-    label: "Kitchen Transformation",
-  },
-  {
-    before: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=600&q=80",
-    after: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80",
-    label: "Living Room Refresh",
-  },
+  { before: beforeBathroom, after: afterBathroom, label: "Bathroom Deep Clean" },
+  { before: beforeKitchen, after: afterKitchen, label: "Kitchen Transformation" },
+  { before: beforeLiving, after: afterLiving, label: "Living Room Refresh" },
 ];
 
 const BeforeAfter = () => {
@@ -24,11 +18,9 @@ const BeforeAfter = () => {
   const [showAfter, setShowAfter] = useState(false);
 
   useEffect(() => {
-    // Cycle: show "before" for 2.5s, then "after" for 2.5s, then next pair
     const interval = setInterval(() => {
       setShowAfter((prev) => {
         if (prev) {
-          // Was showing after, move to next pair's before
           setActivePair((p) => (p + 1) % beforeAfterPairs.length);
           return false;
         }
@@ -52,7 +44,6 @@ const BeforeAfter = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Image display */}
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-foreground/10">
             <AnimatePresence mode="wait">
               <motion.img
@@ -67,23 +58,19 @@ const BeforeAfter = () => {
               />
             </AnimatePresence>
 
-            {/* Label badge */}
             <div className="absolute top-4 left-4 z-10">
               <motion.div
                 key={showAfter ? "after-badge" : "before-badge"}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm backdrop-blur-md ${
-                  showAfter
-                    ? "bg-green-500/90 text-primary-foreground"
-                    : "bg-foreground/20 text-foreground"
+                  showAfter ? "bg-green-500/90 text-primary-foreground" : "bg-foreground/20 text-foreground"
                 }`}
               >
                 {showAfter ? "AFTER ✓" : "BEFORE"}
               </motion.div>
             </div>
 
-            {/* Progress bar */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-foreground/10">
               <motion.div
                 className={showAfter ? "h-full bg-green-500" : "h-full bg-flame"}
@@ -95,7 +82,6 @@ const BeforeAfter = () => {
             </div>
           </div>
 
-          {/* Info panel */}
           <div className="space-y-6">
             <AnimatePresence mode="wait">
               <motion.div
@@ -112,15 +98,11 @@ const BeforeAfter = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Pair selector */}
             <div className="flex gap-3">
               {beforeAfterPairs.map((p, i) => (
                 <button
                   key={i}
-                  onClick={() => {
-                    setActivePair(i);
-                    setShowAfter(false);
-                  }}
+                  onClick={() => { setActivePair(i); setShowAfter(false); }}
                   className={`flex-1 py-3 px-4 rounded-xl text-sm font-medium transition-all border ${
                     i === activePair
                       ? "bg-flame/15 border-flame/40 text-flame"
@@ -132,7 +114,6 @@ const BeforeAfter = () => {
               ))}
             </div>
 
-            {/* Auto-cycle indicator */}
             <div className="flex items-center gap-2 text-foreground/40 text-xs">
               <div className="w-2 h-2 rounded-full bg-flame animate-pulse" />
               Auto-cycling through transformations
