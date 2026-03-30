@@ -50,7 +50,8 @@ const BeforeAfter = () => {
                 key={`${activePair}-${showAfter ? "after" : "before"}`}
                 src={showAfter ? pair.after : pair.before}
                 alt={showAfter ? "After cleaning" : "Before cleaning"}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover block"
+                loading="eager"
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
