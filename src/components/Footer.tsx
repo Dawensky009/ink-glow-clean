@@ -80,11 +80,17 @@ const Footer = () => {
             © {new Date().getFullYear()} Tatoo Cleaning Services. All rights reserved.
           </p>
           <div className="flex gap-4">
-            {["facebook", "instagram", "twitter"].map((social) => (
-              <a key={social} href="#" className="w-10 h-10 rounded-full bg-foreground/5 hover:bg-flame/20 flex items-center justify-center transition-colors">
-                <span className="text-foreground/60 hover:text-flame text-xs capitalize">{social[0].toUpperCase()}</span>
-              </a>
-            ))}
+            <a href="https://www.facebook.com/share/1EHErXSVSK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-foreground/5 hover:bg-flame/20 flex items-center justify-center transition-colors">
+              <Facebook className="w-5 h-5 text-foreground/60 hover:text-flame" />
+            </a>
+            <a href="https://www.instagram.com/tatooshop436?igsh=NHVscmVzbmM1cHRp&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-foreground/5 hover:bg-flame/20 flex items-center justify-center transition-colors">
+              <Instagram className="w-5 h-5 text-foreground/60 hover:text-flame" />
+            </a>
+            <a href="https://www.tiktok.com/@juniorcarlhenry?_r=1&_t=ZT-95DLbc5CfEL" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-foreground/5 hover:bg-flame/20 flex items-center justify-center transition-colors">
+              <svg className="w-5 h-5 text-foreground/60" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.18 8.18 0 004.76 1.52V7.05a4.84 4.84 0 01-1-.36z" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
