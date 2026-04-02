@@ -11,7 +11,7 @@ const services = [
       </svg>
     ),
     title: "Residential Cleaning",
-    description: "Complete home cleaning solutions tailored to your lifestyle. From weekly maintenance to one-time deep cleans.",
+    description: "Spotless homes, happy families. Weekly, bi-weekly, or one-time cleans.",
   },
   {
     icon: (
@@ -20,7 +20,7 @@ const services = [
       </svg>
     ),
     title: "Commercial Cleaning",
-    description: "Professional cleaning for offices, retail spaces, and commercial properties. Keep your business spotless.",
+    description: "Keep your business spotless and professional. Offices, retail & more.",
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const services = [
       </svg>
     ),
     title: "Deep Cleaning",
-    description: "Thorough top-to-bottom cleaning that reaches every corner. Perfect for seasonal refreshes or special occasions.",
+    description: "Top-to-bottom deep clean for every corner of your space.",
   },
 ];
 
@@ -87,7 +87,16 @@ const Home = () => {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                <p className="text-foreground/60 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-foreground/60 text-sm leading-relaxed mb-6">{service.description}</p>
+                <a
+                  href="tel:3212095447"
+                  className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all text-sm shadow-flame"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call Now
+                </a>
               </div>
             ))}
           </div>
@@ -132,7 +141,7 @@ const Home = () => {
 
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=800&q=80" alt="Professional cleaning" className="w-full h-full object-cover" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=800&q=80" alt="Professional cleaning team" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-flame rounded-2xl p-6 shadow-xl">
                 <div className="text-primary-foreground font-bold text-3xl">10+</div>
@@ -178,12 +187,12 @@ const Home = () => {
           <p className="text-foreground/70 text-lg mb-8 max-w-2xl mx-auto">
             Get a free, no-obligation estimate today. Experience the Tatoo difference — where quality meets affordability.
           </p>
-          <Link to="/contact" className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-all duration-200 text-lg shadow-flame">
-            Get Your Free Quote
+          <a href="tel:3212095447" className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-all duration-200 text-lg shadow-flame">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-          </Link>
+            Call Now — (321) 209-5447
+          </a>
         </div>
       </section>
     </div>

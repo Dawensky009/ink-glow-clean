@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <div>
       <section className="relative py-32 gradient-hero">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />
         <div className="relative max-w-7xl mx-auto px-4 text-center pt-8">
           <span className="text-flame text-sm font-semibold uppercase tracking-wider">Get In Touch</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mt-3 mb-4">Contact Us</h1>
@@ -35,24 +35,44 @@ const Contact = () => {
               </p>
 
               <div className="space-y-6">
-                {[
-                  { icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z", title: "Phone", text: "(555) 123-4567", sub: "Mon-Sat 7AM-7PM" },
-                  { icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", title: "Email", text: "info@tatoocleaning.com" },
-                  { icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z", title: "Location", text: "Port Saint Lucie, FL", sub: "Serving the Treasure Coast area" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-flame/10 flex items-center justify-center text-flame flex-shrink-0">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="text-foreground font-semibold mb-1">{item.title}</h4>
-                      <p className="text-foreground/60 text-sm">{item.text}</p>
-                      {item.sub && <p className="text-foreground/40 text-xs mt-1">{item.sub}</p>}
-                    </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-flame/10 flex items-center justify-center text-flame flex-shrink-0">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
                   </div>
-                ))}
+                  <div>
+                    <h4 className="text-foreground font-semibold mb-1">Phone</h4>
+                    <a href="tel:3212095447" className="text-flame hover:text-flame/80 text-sm font-medium transition-colors block">(321) 209-5447</a>
+                    <p className="text-foreground/40 text-xs mt-1">Alternate: (772) 318-9232</p>
+                    <p className="text-foreground/40 text-xs">Mon-Sat 7AM-7PM</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-flame/10 flex items-center justify-center text-flame flex-shrink-0">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-foreground font-semibold mb-1">Email</h4>
+                    <p className="text-foreground/60 text-sm">info@tatoocleaning.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-flame/10 flex items-center justify-center text-flame flex-shrink-0">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-foreground font-semibold mb-1">Location</h4>
+                    <p className="text-foreground/60 text-sm">Port Saint Lucie, FL</p>
+                    <p className="text-foreground/40 text-xs mt-1">Serving the Treasure Coast area</p>
+                  </div>
+                </div>
               </div>
 
               <div className="mt-10">
