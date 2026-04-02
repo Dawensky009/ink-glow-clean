@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const values = [
   {
     icon: (
@@ -43,7 +41,7 @@ const About = () => {
   return (
     <div>
       <section className="relative py-32 gradient-hero">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />
         <div className="relative max-w-7xl mx-auto px-4 text-center pt-8">
           <span className="text-flame text-sm font-semibold uppercase tracking-wider">Our Story</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mt-3 mb-4">About Tatoo Cleaning</h1>
@@ -58,7 +56,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80" alt="Our team" className="w-full h-full object-cover" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=800&q=80" alt="Our team" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-flame/10 rounded-2xl -z-10" />
               <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-flame/20 rounded-2xl -z-10" />
@@ -124,7 +122,7 @@ const About = () => {
                 </ul>
               </div>
               <div className="aspect-square rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Our team at work" className="w-full h-full object-cover" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Our team at work" className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
           </div>
@@ -135,9 +133,12 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Join Our Growing Family of Happy Clients</h2>
           <p className="text-foreground/70 text-lg mb-8">Experience the Tatoo difference today. Your satisfaction is our top priority.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-all text-lg shadow-flame">
-            Contact Us Today
-          </Link>
+          <a href="tel:3212095447" className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-all text-lg shadow-flame">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call Now — (321) 209-5447
+          </a>
         </div>
       </section>
     </div>

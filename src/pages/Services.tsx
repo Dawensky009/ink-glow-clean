@@ -8,7 +8,7 @@ const services = [
       </svg>
     ),
     title: "Residential Cleaning",
-    description: "Complete home cleaning tailored to your needs. Our trained professionals will leave every room spotless, from kitchen to bathroom to living areas. We use eco-friendly products that are safe for your family and pets.",
+    description: "Complete home cleaning tailored to your needs. Safe for your family and pets.",
     features: ["Kitchen deep clean", "Bathroom sanitization", "Dusting & vacuuming", "Mopping all floors"],
   },
   {
@@ -18,7 +18,7 @@ const services = [
       </svg>
     ),
     title: "Commercial Cleaning",
-    description: "Professional cleaning services for offices, retail spaces, and commercial properties. We work around your schedule to minimize disruption while maximizing cleanliness.",
+    description: "Keep your business spotless. We work around your schedule.",
     features: ["Office cleaning", "Retail spaces", "Common areas", "Restroom sanitation"],
   },
   {
@@ -28,7 +28,7 @@ const services = [
       </svg>
     ),
     title: "Deep Cleaning",
-    description: "Intensive top-to-bottom cleaning that goes beyond the surface. Perfect for spring cleaning, post-construction cleanup, or when your space needs extra attention.",
+    description: "Intensive top-to-bottom cleaning that goes beyond the surface.",
     features: ["Behind appliances", "Inside cabinets", "Baseboards & trim", "Light fixtures"],
   },
   {
@@ -38,7 +38,7 @@ const services = [
       </svg>
     ),
     title: "Move-In / Move-Out Cleaning",
-    description: "Make your transition seamless with our comprehensive move-in/move-out cleaning. We'll ensure every surface is pristine for the next chapter.",
+    description: "Make your transition seamless with a pristine space.",
     features: ["Full property clean", "Appliance cleaning", "Cabinet interiors", "Window tracks"],
   },
   {
@@ -48,7 +48,7 @@ const services = [
       </svg>
     ),
     title: "Window Cleaning",
-    description: "Crystal-clear windows inside and out. Our professional window cleaning removes streaks, grime, and buildup for a brilliant view every time.",
+    description: "Crystal-clear windows inside and out. Streak-free every time.",
     features: ["Interior windows", "Exterior windows", "Window sills", "Screen cleaning"],
   },
   {
@@ -58,7 +58,7 @@ const services = [
       </svg>
     ),
     title: "Floor Care & Waxing",
-    description: "Restore the shine to your floors with our professional floor care services. From hardwood to tile, we'll bring your floors back to life.",
+    description: "Restore the shine to your floors. Hardwood, tile & carpet.",
     features: ["Hardwood polishing", "Tile & grout", "Carpet cleaning", "Waxing & buffing"],
   },
 ];
@@ -67,12 +67,12 @@ const Services = () => {
   return (
     <div>
       <section className="relative py-32 gradient-hero">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />
         <div className="relative max-w-7xl mx-auto px-4 text-center pt-8">
           <span className="text-flame text-sm font-semibold uppercase tracking-wider">What We Offer</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mt-3 mb-4">Our Cleaning Services</h1>
           <p className="text-foreground/60 max-w-2xl mx-auto text-lg">
-            Professional cleaning solutions for every space. We tailor our services to meet your specific needs.
+            Simple, clean, and professional. We tailor our services to your needs.
           </p>
         </div>
       </section>
@@ -89,7 +89,7 @@ const Services = () => {
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
                     <p className="text-foreground/60 text-sm leading-relaxed mb-4">{service.description}</p>
-                    <ul className="grid grid-cols-2 gap-2">
+                    <ul className="grid grid-cols-2 gap-2 mb-6">
                       {service.features.map((f, j) => (
                         <li key={j} className="flex items-center gap-2 text-foreground/50 text-sm">
                           <svg className="w-4 h-4 text-flame flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,6 +99,15 @@ const Services = () => {
                         </li>
                       ))}
                     </ul>
+                    <a
+                      href="tel:3212095447"
+                      className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-5 py-2.5 rounded-lg transition-all text-sm shadow-flame"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      Call Now
+                    </a>
                   </div>
                 </div>
               </div>
@@ -111,11 +120,14 @@ const Services = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Need a Custom Cleaning Plan?</h2>
           <p className="text-foreground/70 text-lg mb-8">
-            Every space is different. Contact us for a personalized cleaning plan tailored to your needs and budget.
+            Every space is different. Call us for a personalized plan tailored to your needs and budget.
           </p>
-          <Link to="/contact" className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-all text-lg shadow-flame">
-            Get Your Free Quote
-          </Link>
+          <a href="tel:3212095447" className="inline-flex items-center gap-2 bg-flame hover:bg-flame/90 text-primary-foreground font-semibold px-10 py-4 rounded-lg transition-all text-lg shadow-flame">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Call Now — (321) 209-5447
+          </a>
         </div>
       </section>
     </div>
