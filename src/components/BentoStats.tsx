@@ -13,7 +13,7 @@ const bentoItems = [
     span: "col-span-1 row-span-1",
   },
   {
-    number: "5.0",
+    number: "4.0",
     label: "Star Rating",
     description: "Consistently top-rated on Google & Yelp",
     icon: (
